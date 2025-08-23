@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Hrushikesh Amane Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Hrushikesh Amane</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+					<li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
+					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<!-- TODO : add profile image (images/bg_1.png) -->
+						<div class="one-forth js-fullheight order-md-last img" style="background-image:url(./images/5652030.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Hrushikesh Amane</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Engineer  ',
+										'Coder',
+										'AI-Enthusiast'
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>Software Engineer</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="./images/Photo.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Hrushikesh Amane</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Digital Specialist
+													Engineer</span></p>
+											<p><span class="title-s">Experience: </span> <span id="experience"></span>
+											</p>
+											<script>
+												function calculateExperience(joiningDate) {
+													const startDate = new Date(joiningDate);
+													const currentDate = new Date();
+													let years = currentDate.getFullYear() - startDate.getFullYear();
+													let months = currentDate.getMonth() - startDate.getMonth();
+
+													if (months < 0) {
+														years--;
+														months += 12;
+													}
+
+													return `${years} Years ${months} Months`;
+												}
+
+												document.getElementById('experience').textContent = calculateExperience('2021-12-13');
+											</script>
+											<p><span class="title-s">Address: </span> <span>Pune, Maharashtra,
+													India</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Hands-on experience in full-stack development. Proficient in Java, Angular,
+									RESTful APIs, and SQL databases, with a strong grasp of web technologies and
+									12-factor app design, SOLID principles.
+									Experienced in writing clean, testable code, resolving production issues, and
+									collaborating across teams to deliver
+									efficient, user-focused solutions. Committed to continuous learning and delivering
+									business value through
+									innovative and compliant software practices. </p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Full Stack Developer</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Education Technology</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi</span></li>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pb" id="skills-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Tech Stack</h1>
+					<h2 class="mb-4">Skills</h2>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="row skill-mf justify-content-center"></div>
+				<p class="title-s"></p>
+				<div class="skills-list">
+					<!-- frontend -->
+					<div class="skill-item"><img src="/icons/angular-icon-svgrepo-com.svg" alt="Angular"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Angular</div>
+					<div class="skill-item"><img src="/icons/html-5-svgrepo-com.svg" alt="HTML"
+							style="width: 24px; height: 24px; margin-right: 8px;"> HTML5</div>
+					<div class="skill-item"><img src="/icons/css-3-svgrepo-com.svg" alt="CSS"
+							style="width: 24px; height: 24px; margin-right: 8px;"> CSS</div>
+					<div class="skill-item"><img src="/icons/tailwindcss-icon-svgrepo-com.svg" alt="Tailwind"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Tailwind</div>
+					<div class="skill-item"><img src="/icons/react-svgrepo-com.svg" alt="React"
+							style="width: 24px; height: 24px; margin-right: 8px;"> React</div>
+					<div class="skill-item"><img src="/icons/typescript-official-svgrepo-com.svg" alt="Typescript"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Typescript</div>
+
+					<!-- backend -->
+					<div class="skill-item"><img src="/icons/graphql-svgrepo-com.svg" alt="GraphQL"
+							style="width: 24px; height: 24px; margin-right: 8px;"> GraphQL</div>
+					<div class="skill-item"><img src="/icons/cpp-svgrepo-com.svg" alt="C++"
+							style="width: 24px; height: 24px; margin-right: 8px;"> C++</div>
+					<div class="skill-item"><img src="/icons/java-svgrepo-com.svg" alt="Java"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Java</div>
+					<div class="skill-item"><img src="/icons/spring-icon-svgrepo-com.svg" alt="SpringBoot"
+							style="width: 24px; height: 24px; margin-right: 8px;">SpringBoot</div>
+					<div class="skill-item"><img src="/icons/python-svgrepo-com.svg" alt="Python"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Python</div>
+					<div class="skill-item"><img src="/icons/javascript-svgrepo-com.svg" alt="JavaScript"
+							style="width: 24px; height: 24px; margin-right: 8px;"> JavaScript</div>
+					<div class="skill-item"><img src="/icons/express-original.svg" alt="Express.js"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Express.js</div>
+					<div class="skill-item"><img src="/icons/nestjs-logo.svg" alt="NestJS"
+							style="width: 24px; height: 24px; margin-right: 8px;"> NestJS</div>
+					<div class="skill-item"><img src="/icons/nodejs-original.svg" alt="Node.js"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Node.js</div>
+					<div class="skill-item"><img src="/icons/npm-original-wordmark.svg" alt="NPM"
+							style="width: 24px; height: 24px; margin-right: 8px;"> NPM / PNPM</div>
+					<div class="skill-item"><img src="/icons/jest-svgrepo-com.svg" alt="Jest"
+							style="width: 24px; height: 24px; margin-right: 8px;">Jest</div>
+
+					<!-- infra -->
+					<div class="skill-item"><img src="/icons/mysql-svgrepo-com.svg" alt="MySQL"
+							style="width: 24px; height: 24px; margin-right: 8px;"> MySQL</div>
+					<div class="skill-item"><img src="/icons/postgresql-logo.svg" alt="Postgresql"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Postgresql</div>
+					<div class="skill-item"><img src="/icons/mongo-svgrepo-com.svg" alt="MongoDB"
+							style="width: 24px; height: 24px; margin-right: 8px;"> MongoDB</div>
+					<div class="skill-item"><img src="/icons/redis-logo-svgrepo-com.svg" alt="Redis"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Redis</div>
+					<div class="skill-item"><img src="/icons/neo4j-svgrepo-com.svg" alt="Neo4j"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Neo4j</div>
+					<div class="skill-item"><img src="/icons/git-svgrepo-com.svg" alt="Git"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Git</div>
+					<div class="skill-item"><img src="/icons/aws.svg" alt="AWS"
+							style="width: 24px; height: 24px; margin-right: 8px;"> AWS</div>
+					<div class="skill-item"><img src="/icons/docker-svgrepo-com.svg" alt="Docker"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Docker</div>
+					<div class="skill-item"><img src="/icons/kubernetes-svgrepo-com.svg" alt="Kubernetes"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Kubernetes</div>
+					<div class="skill-item"><img src="/icons/apachekafka-svgrepo-com.svg" alt="Kafka"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Kafka</div>
+					<div class="skill-item"><img src="/icons/apacheflink-svgrepo-com.svg" alt="Flink"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Flink</div>
+					<div class="skill-item"><img src="/icons/systems-devops-cicd-pipeline-svgrepo-com.svg" alt="CICD"
+							style="width: 24px; height: 24px; margin-right: 8px;"> CICD</div>
+
+					<!-- other -->
+					<div class="skill-item"><img src="/icons/jira-svgrepo-com.svg" alt="Jira"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Jira</div>
+					<div class="skill-item"><img src="/icons/confluence-svgrepo-com.svg" alt="Confluence"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Confluence</div>
+					<div class="skill-item"><img src="/icons/ai-hub-svgrepo-com.svg" alt="Generative AI"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Generative AI</div>
+					<div class="skill-item"><img src="/icons/command-svgrepo-com.svg" alt="Prompt Engineering"
+							style="width: 24px; height: 24px; margin-right: 8px;"> Prompt Engineering</div>
+
+
+				</div>
+			</div>
+
+			<style>
+				.skills-list {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 10px;
+				}
+
+				.skill-item {
+					color: black;
+					display: flex;
+					align-items: center;
+					background: #f8f9fa;
+					border: 1px solid #dee2e6;
+					border-radius: 20px;
+					padding: 10px 15px;
+					margin: 5px;
+					transition: transform 0.3s ease, background-color 0.3s ease;
+				}
+
+				.skill-item i {
+					margin-right: 8px;
+				}
+
+				.skill-item:hover {
+					transform: scale(1.1);
+					background-color: #ffbd39;
+				}
+			</style>
+		</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pb" id="experience-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Experience</h1>
+					<h2 class="mb-4">Experience</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-center"></div>
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2021-Present</span>
+					<h2>Digital Specialist Engineer</h2>
+					<span class="position">Infosys Ltd</span>
+					<p class="mt-4">An Indian multinational technology company that offers business consulting,
+						information technology, and outsourcing services.
+					</p>
+					<ul>
+						<li>Built and maintained responsive web applications using JavaScript (ES6+), Angular, HTML, and
+							CSS.</li>
+						<li>Developed and consumed RESTful APIs; integrated GraphQL endpoints for efficient data
+							retrieval.</li>
+						<li>Wrote clean, maintainable, and well-tested code with unit and integration tests to ensure
+							high quality code with 90-95% code coverage.</li>
+						<li>Improved the product's availability and fault tolerance through dynamic horizontal scaling
+							on AWS, ensuring uninterrupted service and enhancing user experience.</li>
+						<li>Developed Python scripts to automate the manual task thereby reducing efforts and boosting
+							availability of feature.</li>
+						<li>Actively engaged with potential customers as the lead developer, providing technical
+							guidance and support to drive customer success which increased product adoption by over 20%.
+						</li>
+						<li>Architected and developed a cloud-native version of the product on Kubernetes and packaged
+							it as a Helm chart for ease of deployment, distribution and versioning.</li>
+						<li>Established robust Kubernetes cluster monitoring through Prometheus & Grafana and introduced
+							container log aggregation using Grafana Loki.</li>
+						<li>Collaborated with cross-functional teams including Product, Design, and QA to define and
+							deliver features.</li>
+						<li>Monitored live system metrics, responded to alerts, and resolved production issues to ensure
+							system reliability.</li>
+						<li>Conducted code reviews and contributed to improving application scalability,
+							maintainability, and performance.</li>
+						<li>Documented technical designs, workflows for internal knowledge sharing.</li>
+						<li>Utilized Generative AI with Prompt Engineering to boost the productivity by 15-20%.</li>
+					</ul>
+				</div>
+			</div>
+
+			<br>
+	</section>
+
+	<section class="ftco-section ftco-no-pb" id="projects-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">My Work</h2>
+					<p>Here are a few projects I've worked on:</p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<!-- Engagement Card -->
+				<div class="col-md-4 d-flex align-items-stretch">
+					<div class="card mb-4 shadow-sm h-100">
+						<div class="card-body">
+							<h3 class="card-title">Engagement</h3>
+							<ul>
+								<li>Developed a NodeJS application that seamlessly assigns platform activities (login, course completion) to users.</li>
+								<li>Containerized the application using Docker and set up a CI/CD pipeline for automated image builds and pushes.</li>
+								<li>Automated syncing of highlights with GitHub Actions on main branch updates.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Gamification Card -->
+				<div class="col-md-4 d-flex align-items-stretch">
+					<div class="card mb-4 shadow-sm h-100">
+						<div class="card-body">
+							<h3 class="card-title">Gamification</h3>
+							<ul>
+								<li>Developed a NodeJS application to award badges to users for desired actions.</li>
+								<li>Created a wrapper service for external applications to access user gamification data.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- LEX – Learning Platform Card -->
+				<div class="col-md-4 d-flex align-items-stretch">
+					<div class="card mb-4 shadow-sm h-100">
+						<div class="card-body">
+							<h3 class="card-title">LEX – Learning Platform</h3>
+							<ul>
+								<li>Developed and maintained a learning platform UI for seamless user experience.</li>
+								<li>Handled all UI-related issues for the Lex web application.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<style>
+				.card {
+					background-color: #212529;
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
+				}
+				.card:hover {
+					transform: scale(1.05);
+					box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+					border-color: #ffbd39;
+				}
+				.card-title {
+					color: #ffbd39;
+					font-weight: bold;
+					font-size: 1.3rem;
+				}
+				.card ul {
+					padding-left: 18px;
+				}
+				@media (max-width: 767px) {
+					.row.justify-content-center > .col-md-4 {
+						max-width: 100%;
+						flex: 0 0 100%;
+					}
+				}
+			</style>
+		</div>
+	</section>
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Pune, Maharashtra, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+91 7620142317</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:info@yoursite.com">hrushi.amane2997@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="https://drive.google.com/uc?export=download&id=1qYc-pGrprM_XgIvoYbt3h_8DQ8R2ANIt">Resume</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/hrushikesh-amane/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://leetcode.com/u/hrushi9/"><span
+									class="icon-code"></span></a></li>
+						<li class="ftco-animate"><a href="https://github.com/hrushi5387"><span
+									class="icon-github"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
